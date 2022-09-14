@@ -1,8 +1,7 @@
-# bot built on previous experience of a bot which traded indices
-# algorithm will recognise 3 soldiers candlestick pattern as an indicator to sell
+# trading algorithm will recognise 3 soldiers candlestick pattern as an indicator to sell
 
-# using websocket, retrieve real time ticker data and convert to candlestick - which we can use to analyse above pattern
-# will use alpaca api - like indices project but will subscribe to specific tickers this time
+# using websocket, retrieve real time ticker data and convert to candlestick data- which we can use to analyse above pattern
+# will use alpaca api to subscribe to specific tickers
 
 import websocket
 import json
@@ -17,9 +16,9 @@ current_tick = None
 previous_tick = None
 in_position = False
 
-# would be separate file in production code
 SYMBOL = "AAPL"
 TICKERS = "Q.AAPL"
+# PLEASE REGISTER WITH ALPACA API AND GENERATE API_KEY AND SECRET_KEY
 API_KEY = ""
 SECRET_KEY = ""
 
